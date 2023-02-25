@@ -11,11 +11,13 @@ const Mainbody = (props) => {
         let el = document.getElementById("textAreaExample6");
         console.log(el.value.toUpperCase());
         setValue(el.value.toUpperCase());
+        props.showAlert("Covert to uppercase" ,"succes");
 
     }
     function lowercase() {
         let el = document.getElementById('textAreaExample6');
         setValue(el.value.toLowerCase());
+        props.showAlert("convert to lowercase" ,"succes");
     }
     function reverseText() {
         let reverse_text = "";
@@ -25,6 +27,7 @@ const Mainbody = (props) => {
         }
         console.log(reverse_text);
         setValue(reverse_text);
+        props.showAlert("text is reversed" ,"succes");
     }
     return (
 
@@ -32,6 +35,11 @@ const Mainbody = (props) => {
 
 
 
+
+
+
+
+        
 
             <div className="form-outline mb-4 my- 6 w-75 my-5 justify-content-center " style={{ marginLeft: "12.5%" }}>
                 <textarea className="form-control" id="textAreaExample6" rows="3" onChange={changeValue} value={value}></textarea>
